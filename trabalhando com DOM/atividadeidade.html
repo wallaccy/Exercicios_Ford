@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//crie um programa para calcular a idade de uma pessoa em:
+        // meses - dias - horas - minutos
+        // estrutura de código: entrada de dados(usuário digita), processamento(calculo - lógica)
+        // e exibição(saída) dos dados(alert, log...)
+
+        const dia = prompt("digite o dia do seu nascimento: ")
+        const mes = prompt("digite o mês do seu nascimento: ")
+        const ano = prompt("digite o ano do seu nascimento: ")
+        const idadeAno = (parseInt(2023) - parseInt(ano))
+        const idadeMeses = idadeAno * 12
+        const idadeDias = idadeAno * 365
+        const idadeHoras = idadeDias * 24
+        const idadeMinutos = idadeHoras * 60
+
+       alert(idadeAno , idadeMeses + idadeDias + idadeHoras + idadeMinutos)
+    
+// correção professor
+// const nome = prompt("nome: ")
+// const idade = prompt("idade: ")
+// let meses = 12
+// let dias = 365
+// let horas = 24
+// let minutos = 60
+
+
+ const calculoMeses = idade * meses
+ const calculoDias = idade * dias
+ const calculoHoras = calculoDias * horas
+ const calculoMinutos = calculoHoras * minutos
+alert(`
+a idade em meses é ${calculoMeses}
+a idade em dias é ${calculoDias}
+a idade em horas é ${calculoHoras}
+a idade em minutos é ${calculoMinutos}
+`)
+
+const escolhaUser = Number(prompt(`
+o que voce deseja exibir?
+1- calculo em meses
+2- calculo em dias
+3- calculo em horas
+4- calculo em minutos
+`))
+
+switch (escolhaUser) {
+    case 1:
+        alert(`aidade do ${nome}, em meses, é de:${calculoMeses} meses`)
+        break;
+    
+    case 2:
+        alert(`aidade do ${nome}, em dias, é de:${calculoDias} dias`)
+        break;
+    
+    case 1:
+        alert(`aidade do ${nome}, em horas, é de:${calculoHoras} horas`)
+        break;
+    
+    case 1:
+        alert(`aidade do ${nome}, em minutos, é de:${calculoMinutos} minutos`)
+        break;
+    
+    default:
+        alert("dados incorretos")
+        break;    
+
+}
+
+// arquivo professor
+
+ //crie um programa para calcular a idade de uma pessoa em:
+        //meses - dias - horas - minutos
+
+        let meses = 12 // -> meses 
+        let dias = 365 // -> dias
+        let horas = 24 // -> horas
+        let minutos = 60 // -> minutos
+
+        //entrada de dados - usuario digitar 
+        const nome = prompt("informe seu nome: ")
+        const idade = prompt("Informe a sua idade: ");
+
+
+
+        //processamento de dados - calculo (lógica)
+        const calculoMeses = idade * meses
+        const calculoDias = idade * dias //numero grandãoooooo em dias
+        const calculoHoras = calculoDias * horas
+        const calculoMinutos = calculoHoras * minutos
+
+        //saída dos dados - exibição (alert, log... )
+
+        //operador ternário (if - else)
+        //primeiro entramos com a condição, depois o retorno se for verdadeiro e por fim, o retorno se for falso
+        
+        //quebra de linha = literal templates
+        //         idade > 0 && idade < 100 ?
+        //             alert(`
+        // a idade do(a) ${nome}, em meses, é de: ${calculoMeses} meses
+        // a idade do(a) ${nome}, em dias, é de: ${calculoDias} dias
+        // a idade do(a) ${nome}, em horas, é de: ${calculoHoras} horas
+        // a idade do(a) ${nome}, em minutos, é de: ${calculoMinutos} minutos
+        //  `) : 
+        //  alert("dados inválidos")
+
+
+        //if comum:
+        if (idade > 0 && idade < 100) {
+
+            const escolhaUser = Number(prompt(`
+                o que você deseja exibir? 
+                1- calculo em meses, 
+                2- calculo em dias, 
+                3- calculo em horas, 
+                4- calculo em minutos
+                `))
+
+            switch (escolhaUser) {
+                case 1:
+                    alert(`a idade do(a) ${nome}, em meses, é de: ${calculoMeses} meses`)
+                    break;
+                case 2:
+                    alert(`a idade do(a) ${nome}, em dias, é de: ${calculoDias} dias`)
+                    break;
+                case 3:
+                    alert(` a idade do(a) ${nome}, em horas, é de: ${calculoHoras} horas`)
+                    break;
+                case 4:
+                    alert(` a idade do(a) ${nome}, em minutos, é de: ${calculoMinutos} minutos`)
+                    break;
+                default:
+                    alert("dados incorretos")
+                    break;
+            }
+        } else {
+            alert("a idade informada não atende aos requisitos")
+        }
+
+        //exercicio calculadora 4 operações
+        
+
+        calculoSoma = numero1 + numero2
+        calculoSub = numero1 - numero2
+        calculoMulti = numero1 * numero2
+        calculoDiv = numero1 / numero2
+        
+        escolhaOperacao = (prompt(`
+             Qual operação?
+             1- soma
+             2- subtração
+             3- multiplicação
+             4- divisão 
+             `))
+
+        var numero1 = prompt("insira um numero")
+        var numero2 = prompt("insira outro numero")
+       
+        switch (escolhaOperacao) {
+            case 1:
+                alert(`o resultado é ${calculoSoma}`)
+                break;
+            case 2:
+                alert(`o resultado é ${calculoSub}`)
+                break;
+            case 3:
+                alert(`o resultado é ${calculoMulti}`)
+                break;
+            case 4:
+                alert(`o resultado é ${calculoDiv}`)
+                break;
+        }
+    </script>
+</body>
+</html>
+

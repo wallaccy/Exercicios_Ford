@@ -1,0 +1,12 @@
+sudo su
+sudo apt-get install nginx -y
+ps auxw | grep nginx quais serviços estáo em execução
+apt install nginx -y instalar nginx
+gcloud compute instances create gcelab2 --machine-type e2-medium --zone=$ZONE criar maquina virtual utilizando a linha de comado
+shift insert é igual a ctrl v
+
+
+
+
+
+1uVpWHTxiuf+;FI

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud usuario</title>
+</head>
+<body>
+    <script>
+        //create = Post 
+        //read = Get
+        //Update = Put
+        //Delete = Delete
+        //Get by ID
+        //Criar um sistema de gerenciamento de usuários
+        let arrUsuario = []
+
+        function mostrarmenu() {
+            alert(`
+            *****MENU*****
+            [1] - Cadastrar Usuario
+            [2] - Listar Usuario
+            [3] - Atualizar Usuario
+            [4] - Deletar Usuario
+            [5] - Sair do programa
+
+            `)
+        }
+
+        function adicionarUsuario() {
+            let nomeUsuario = prompt("Qual o nome do usuario: ")
+            let emailUsuario = prompt("Qual o email do usuario:")
+
+            if((nomeUsuario || emailUsuario) == ""){
+                alert(" o nome é obrigatório")
+                // ou if (nomeUsuario == "" || emailUsuario == ""){
+                // ou if(!nomeUsuario || !emailusuario){
+            }
+
+            arrUsuario.push({nomeUsuario, emailUsuario})
+
+            console.log(arrUsuario);
+        }
+
+        //método de listar (verbo http: get)
+
+        function listarUsuario() {
+            let listaUser;
+
+            for (const usuario of arrUsuario) {
+                listaUser = (`
+                    Nome: ${usuario.nomeUsuario}, Email: ${}
+
+
+                `)
+            }
+        }
+
+        // método atualizar usuario (verbo http: PUT)
+
+        function atualizarUsuario(){
+            let findEmail = prompt("Informe o e-mail que voce deseja atualizar:")
+            let usuarioAtualizado = arrUsuario.find(usuario => 
+            usu)
+
+
+            if (novoNomeUsuario) {
+                usuarioAtualizado.nomeUsuario = novoNomeUsuario
+            }
+
+            if (novoNomeUsuario) {
+                usuarioAtualizado.emailUsuario = novoNomeUsuario
+            }
+        }
+
+        // método deletar verbo http: delete
+
+        function deleteUsuario() {
+            let emailDelete = prompt("Informe o email que voce deseja excluir")
+            let indiceDelete = arrUsuario.findIndex(usuario =>
+            usuario.emailUsuario === emailDelete)
+            if (indiceDelete === -1) {
+                alert("Usuario não foi encontrado")
+        
+            }
+        }
+
+        let opcaoUser;
+
+        mostrarmenu()
+
+        opcaoUser = parseInt(prompt("informe uma das opcoes:"))
+
+        while (opcaoUser !== 5) {
+            mostrarmenu()
+
+        switch(opcaoUser) {
+            case 1:
+                adicionarUsuario()
+                break;
+            
+            case 2:
+                listarUsuario()
+                break;
+            
+            case 3:
+                atualizarUsuario()
+                break;
+                
+            case    
+                
+        }
+    }
+
+    </script>
+    
+</body>
+</html>

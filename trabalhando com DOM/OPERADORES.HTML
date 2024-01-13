@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+    <script>
+        console.log('Olá, Mundo!');
+
+        alert("Seja bem vindo")
+
+       //const nome = prompt("Informe o seu nome abaixo:")
+
+        console.log(prompt);
+
+        confirm("certeza que " + nome + "é o seu nome?") //concatenação
+        confirm(`certeza que ${nome} é o seu nome?`)     //  interpolação usa crase e chaves           
+        // alt shift setinha pra baixo(
+
+        //operadores aritméticos + - / *
+
+       const primeiroNumero = prompt("digite o primeiro número:")
+       const segundoNumero = prompt("digite o segundo numero:")
+       const soma = parseInt(primeiroNumero) + parseInt(segundoNumero)
+       console.log(soma)
+
+       //receber as notas de 3 alunos diferentes e exibir a média final do aluno 
+       // exiba nnome do aluno e nota final
+       // utililze prompt e operadores artimeticos
+
+       //const nome1 = prompt("digite seu nome:")
+       //const nota1 = prompt("digite sua primeira nota:")
+       //const nota2 = prompt("digite sua segunda nota:")
+       //const nota3 = prompt("digite terceira nota:")
+       //const media = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3
+       //alert(nome1 + " sua média é " + media)
+
+       // operadores condicionais 
+       // if - if composto - if encadeado
+       if (condition) {
+        // boolean (verdadiero ou falso)
+        // se a condição não for atendida
+       }else{
+        //falso
+        //se a condição não for atendida
+       }
+
+       const nome = prompt("digite seu nome: ")
+       const idade = prompt(`${nome}, qual sua idade: `)
+       const documento = prompt(`${nome}, voce esta com seu documento?`)
+
+       if (idade >= 18 && documento == 'sim') {
+        alert("liberado")
+       }else{
+        alert("Barrado")
+       }
+
+       // operadores lógicos -> E(&&) OU (||)
+     
+                                                 //valor se verdadeiro        //valor se falso      
+       idade >= 18 && documento == 'sim'? alert("voce esta liberado") : alert('barrado') //operador ternario 
+
+
+
+    </script>
+    <!-- ctr k c para comentar -->
+</body>
+</html>
+

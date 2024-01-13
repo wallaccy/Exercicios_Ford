@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #D7D4FF;
+}
+
+.row{
+    display: flex;
+    width: 900px;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black; 
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.inputbox{
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+

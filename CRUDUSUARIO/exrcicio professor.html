@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+
+<body>
+      <script>
+// Contatos
+
+let arrUsuario = []
+
+        function mostrarMenu() {
+            alert(`
+                *****MENU*****
+                [1] - Cadastrar Usuário/Telefone
+                [2] - Listar Usuário(s)/Telefone(s)
+                [3] - Atualizar Usuário/Telefone
+                [4] - Deletar Usuário/Telefone
+                [5] - Sair do programa
+            `)
+        }
+
+        // Cadastro Post
+
+function adicionarUsuario() {
+            let nomeUsuario = prompt("QUAL É SEU NOME: ")
+            let telefoneUsuario = prompt("QUAL É SEU TELEFONE:")
+
+            if (!nomeUsuario || !telefoneUsuario) {
+                alert("O nome do campo é obrigatório!")
+            }
+
+            arrUsuario.push({ nomeUsuario, telefoneUsuario })
+
+            console.log(arrUsuario);
+        }
+
+        // Listar Get
+
+        function listarUsuario() {
+            let listaUser;
+
+            for (const Usuario of arrUsuario) {
+                listaUser += (`
+                    Nome: ${Usuario.nomeUsuario}, Email: ${Usuario.telefoneUsuario}
+                `)
+            }
+            alert("***** LISTA DE USUÁRIOS / TELEFONES *****" + listaUser)
+        }
+        // realizar a atualização de um contato -> PUT
+        function atualizarcontato() {
+            let numeroBuscado = prompt("Informe o numero de telefone:")
+            let retornarNumeroBuscado = arrContatos.find(contato => contato.numeroContato === numeroBuscado)
+        }
+         //condição 
+         if (!retornarNumeroBuscado) {
+            !alert("Contato não encontrado")
+
+            return;
+
+         }
+
+         let novoNomeContato = prompt("Informe o nome atualizado:")
+         let novoNumeroContato = prompt("Informe o numero atualizado:")
+
+         //atualizar contato
+         if(novoNomeContato) {
+            retornarNumeroBuscado.nomeContato = novoNumeroContato;
+
+         }
+
+        alert("o contato foi atualizado!")
+
+        function deleteUsuario() {
+            let telefoneDelete = prompt("Informe o telefone que você deseja excluir")
+            let indiceDelete = arrUsuario.findIndex(Usuario => Usuario.telefoneUsuario === telefoneDelete)
+
+            if (indiceDelete === -1) {
+                alert("Usuario não foi encontrado no sistema")
+                return;
+            }
+
+            arrUsuario.splice(indiceDelete, 1)          
+     
+
+            alert("Usuario foi deletado com sucesso!")
+        }
+
+        let opcaoUser;
+
+        while (opcaoUser !== 5) {
+            mostrarMenu()
+
+            opcaoUser = Number(prompt("Informe uma das opções do menu: "))
+
+            switch (opcaoUser) {
+                case 1:
+                    adicionarUsuario()
+                    break;
+                case 2:
+                    listarUsuario()
+                    break;
+                case 3:
+                    atualizarUsuario()
+                    break;
+                case 4:
+                    deleteUsuario()
+                    break;
+                case 5:
+                    alert("ATÉ MAIS E VOLTE SEMPRE !!")
+                    break;
+
+                default:
+                    alert("Opção inválida")
+                    break;
+            }
+
+        }
+        
+        </script>
+</body>
+</html>

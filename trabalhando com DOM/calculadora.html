@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        escolhaOperacao = Number(prompt(`
+        Qual operação?
+        1- soma
+        2- subtração
+        3- multiplicação
+        4- divisão 
+        `))
+        
+        var numero1 = Number(prompt("insira um numero"))
+        var numero2 = Number(prompt("insira outro numero"))
+        
+        const calculoSoma = numero1 + numero2
+        const calculoSub = numero1 - numero2
+        const calculoMulti = numero1 * numero2
+        const calculoDiv = numero1 / numero2
+
+        switch (escolhaOperacao) {
+            case 1:
+                alert(`o resultado é ${calculoSoma}`)
+                break;
+            case 2:
+                alert(`o resultado é ${calculoSub}`)
+                break;
+            case 3:
+                alert(`o resultado é ${calculoMulti}`)
+                break;
+            case 4:
+                alert(`o resultado é ${calculoDiv}`)
+                break;
+        }
+
+
+    </script>
+</body>
+</html>
